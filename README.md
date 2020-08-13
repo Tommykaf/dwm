@@ -57,5 +57,6 @@ Patches Applied
 * center
 * swallow
 * alpha
+* Xresources
 
 Default Font - Fira Code

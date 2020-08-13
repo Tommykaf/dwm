@@ -56,5 +56,6 @@ Patches Applied
 * fibonacci
 * center
 * swallow
+* alpha
 
 Default Font - Fira Code

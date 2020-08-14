@@ -60,3 +60,4 @@ Patches Applied
 * Xresources
 
 Default Font - Fira Code
+For emoji support - use font `ttf-twemoji` from AUR, install `libxft-bgra`

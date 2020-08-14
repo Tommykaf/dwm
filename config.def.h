@@ -5,7 +5,10 @@ static unsigned int borderpx  = 1;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FiraCode:style=Regular:pixelsize=18:antialias=true:autohint=true" };
+static const char *fonts[]          = {
+	"FiraCode:style=Regular:pixelsize=18:antialias=true:autohint=true",
+	"Twemoji:style=Regular:pixelsize=14:antialias=true:autohint=true"
+};
 static const char dmenufont[]       = "FiraCode:style=Regular:pixelsize=18:antialias=true:autohint=true";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -71,7 +74,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-g", dmenucols, "-l", dmenurows, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-g", dmenucols, "-l", dmenurows, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 /*

@@ -3,6 +3,7 @@
 /* appearance */
 static unsigned int borderpx  = 1;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
+static const int gappx        = 5;                 /* gaps between windows */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
@@ -59,6 +60,8 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
  	{ "[@]",      spiral },
  	{ "[\\]",      dwindle },
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
 };
 
 /* key definitions */
@@ -107,8 +110,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
-	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
+	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = -0.25} },
+	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
@@ -118,6 +121,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -126,6 +131,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

@@ -52,12 +52,13 @@ and (re)compiling the source code.
 Patches Applied
 ---------------
 
-* cfacts + cfacts-centeredmaster
+* cfacts
 * fibonacci
 * center
 * swallow
 * alpha
 * Xresources
-
+* ru gaps
+* support for centeredmaster, fibonacci layouts with gaps and cfacts
 Default Font - Fira Code
 For emoji support - use font `ttf-twemoji` from AUR, install `libxft-bgra`

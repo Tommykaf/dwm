@@ -3,7 +3,7 @@
 /* appearance */
 static unsigned int borderpx  = 1;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
-static const int gappx        = 5;                 /* gaps between windows */
+static int gappx              = 15;                 /* gaps between windows */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
@@ -91,12 +91,13 @@ ResourcePref resources[] = {
 		{ "selbordercolor",     STRING,  &selbordercolor },
 		{ "selfgcolor",         STRING,  &selfgcolor },
 		{ "borderpx",          	INTEGER, &borderpx },
-		{ "snap",          		INTEGER, &snap },
+		{ "snap",          	INTEGER, &snap },
 		{ "showbar",          	INTEGER, &showbar },
 		{ "topbar",          	INTEGER, &topbar },
 		{ "nmaster",          	INTEGER, &nmaster },
 		{ "resizehints",       	INTEGER, &resizehints },
-		{ "mfact",      	 	FLOAT,   &mfact },
+		{ "mfact",      	FLOAT,   &mfact },
+		{ "gappx",		INTEGER, &gappx},
 };
 
 static Key keys[] = {
@@ -142,7 +143,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 

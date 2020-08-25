@@ -60,5 +60,5 @@ Patches Applied
 * Xresources
 * ru gaps
 * support for centeredmaster, fibonacci layouts with gaps and cfacts
-Default Font - Fira Code
+Default Font - FiraCode Nerd Font
 For emoji support - use font `ttf-twemoji` from AUR, install `libxft-bgra`

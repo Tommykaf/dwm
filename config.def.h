@@ -7,7 +7,7 @@ static int gappx              = 15;                 /* gaps between windows */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
-	"FiraCode:style=Regular:pixelsize=18:antialias=true:autohint=true",
+	"FiraCode Nerd Font:style=Regular:pixelsize=18:antialias=true:autohint=true",
 	"Twemoji:style=Regular:pixelsize=14:antialias=true:autohint=true"
 };
 static const char dmenufont[]       = "FiraCode:style=Regular:pixelsize=18:antialias=true:autohint=true";

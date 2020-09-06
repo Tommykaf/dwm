@@ -8,9 +8,10 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
 	"FiraCode Nerd Font:style=Regular:pixelsize=18:antialias=true:autohint=true",
+	"Cousine:style=Regular:pixelsize=18:antialias=true:autohint=true",
 	"Twemoji:style=Regular:pixelsize=14:antialias=true:autohint=true"
 };
-static const char dmenufont[]       = "FiraCode:style=Regular:pixelsize=18:antialias=true:autohint=true";
+static const char dmenufont[]       = "FiraCode Nerd Font:style=Regular:pixelsize=18:antialias=true:autohint=true";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -34,7 +35,7 @@ static const char dmenucols[2] = "3";
 static const char dmenurows[2] = "5";
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "ﭮ", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -143,6 +144,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
+	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 

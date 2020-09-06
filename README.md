@@ -60,5 +60,9 @@ Patches Applied
 * Xresources
 * ru gaps
 * support for centeredmaster, fibonacci layouts with gaps and cfacts
-Default Font - FiraCode Nerd Font
-For emoji support - use font `ttf-twemoji` from AUR, install `libxft-bgra`
+
+Fonts
+-----
+Default Font - FiraCode Nerd Font - `nerd-fonts-fira-code` from AUR
+Hebrew Font - Cousine from package `ttf-croscore`
+Emoji Font - use font `ttf-twemoji` from AUR. In addition, install the `libxft-bgra` package

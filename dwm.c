@@ -331,6 +331,7 @@ applyrules(Client *c)
 	/* rule matching */
 	c->iscentered = 0;
 	c->isfloating = 0;
+	c->noswallow = 0;
 	c->tags = 0;
 	XGetClassHint(dpy, c->win, &ch);
 	class    = ch.res_class ? ch.res_class : broken;
@@ -343,8 +344,9 @@ applyrules(Client *c)
 		&& (!r->instance || strstr(instance, r->instance)))
 		{
 			c->iscentered = r->iscentered;
-			c->isterminal = r->isterminal;
 			c->isfloating = r->isfloating;
+			c->isterminal = r->isterminal;
+			c->noswallow = r->noswallow;
 			c->tags |= r->tags;
 			for (m = mons; m && m->num != r->monitor; m = m->next);
 			if (m)
